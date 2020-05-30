@@ -36,9 +36,9 @@ transform:translate(-50%,-50%);
     <div class="card-body">
 	<form  class="w-75 m-auto form-inline">
 	<div class="form-group">
-	<input  type="text"class="form-control text-center "placeholder="Your name">
+	<input  type="text"class="form-control text-center "placeholder="Your name"id="name1">
 	<div class="form-group"><span class="pl-4 pr-4">+</span></div>
-		<input  type="text"class="form-control text-center"placeholder="Love name">
+		<input  type="text"class="form-control text-center"placeholder="Love name"id="name2">
 		
 	</div></form> <br>
 	<div class="w-50 m-auto">
@@ -50,9 +50,33 @@ transform:translate(-50%,-50%);
 <script>
 function mylove()
 {
+var name1=document.getElementById("name1").value;
+var name2=document.getElementById("name2").value;
+if(name1=="")
+{
+alert("All fields are  mandatory");
+}else if(name1.length<4)
+{
+alert("Minimum length is 4");
+}else if(!isNaN(name1))
+{
+alert("must contain alphabets");
+}if(name2=="")
+{
+alert("All fields are  mandatory");
+}else if(name2.length<4)
+{
+alert("Minimum length is 4");
+}else if(!isNaN(name2))
+{
+alert("must contain alphabets");
+}
+else{
 var love=Math.random() * 100;
 love=Math.floor(love);
 document.getElementById('lovevalue').value=love;
+}
+
 }
 </script>
 
