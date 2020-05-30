@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</head>
+<style>
+body{
+background-image:url("123.png");
+background-attachment:fixed;
+background-repeat:no-repeat;
+background-position:center;
+position:relative;
+background-size:cover;
+height:100vh;
+width:100%;
+}
+.card{
+width:100%;
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+}
+</style>
+<body>
+ 
+
+  <div class="card m-auto w-50 text-center">
+    <div class="card-header  bg-danger text-white">Love calculator</div>
+    <div class="card-body">
+	<form  class="w-75 m-auto form-inline">
+	<div class="form-group">
+	<input  type="text"class="form-control text-center "placeholder="Your name">
+	<div class="form-group"><span class="pl-4 pr-4">+</span></div>
+		<input  type="text"class="form-control text-center"placeholder="Love name">
+		
+	</div></form> <br>
+	<div class="w-50 m-auto">
+	<input type="button"class="btn  btn-success  text-center w-50"value="click" onclick="mylove()"></div><br>
+<input  type="text"class="form-control w-50 m-auto text-center"placeholder="percent"id="lovevalue"><br>
+    <div class="card-footer text-center">God Bless Your Relationship</div>
+  </div>
+ 
+<script>
+function mylove()
+{
+var love=Math.random() * 100;
+love=Math.floor(love);
+document.getElementById('lovevalue').value=love;
+}
+</script>
+
+</body>
+</html>
